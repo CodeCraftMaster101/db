@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Craft Master</title>
+    <link rel="icon" type="image/x-icon" href="YOUR_ICON_URL_HERE">
+    <link rel="stylesheet" href="stayle.css">
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+</head>
+<body>
+    <!-- Matrix Background Effect -->
+    <canvas class="matrix-bg" id="matrix"></canvas>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-section">
+            <div class="site-icon" id="youtubeIcon">
+                <img src="icon.jpg" alt="logo">
+            </div>
+            <h1 class="site-title">CodeCraftMaster101 ARCHIVE</h1>
+        </div>
+        <div style="font-size: 12px;">
+            <span class="access-granted">ACCESS GRANTED</span> | 
+            <span id="current-time"></span>
+        </div>
+    </div>
+
+    <!-- Main Terminal Window -->
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="terminal-btn"></div>
+                <div class="terminal-btn"></div>
+                <div class="terminal-btn"></div>
+            </div>
+            <span>root@codecraftmaster101:~$ ls -la /files</span>
+        </div>
+        
+        <div class="terminal-content">
+            <div class="welcome-text">
+                <span class="typing-effect" id="welcome-text"></span>
+            </div>
+
+            <!-- File Grid -->
+            <div class="file-grid">
+                <div class="file-item">
+                    <div class="file-icon">📁</div>
+                    <div class="file-name">Configuration_vlan.zip</div>
+                    <div class="file-description">This file contains a document and the Cisco Packet Tracer schema that we used in the VLAN video on our channel</div>
+                    <button class="download-btn" onclick="downloadFile(this)" data-link="https://github.com/CodeCraftMaster101/db.configuration.vlan/archive/refs/heads/main.zip">
+                        DOWNLOAD FILE
+                    </button>
+                </div>
+
+
+                <div class="file-item">
+                    <div class="file-icon">📁</div>
+                    <div class="file-name">TP_Subnetting.zip</div>
+                    <div class="file-description">This file contains and the Cisco Packet Tracer schema that we used in the TP Subnetting video on our channel</div>
+                    <button class="download-btn" onclick="downloadFile(this)" data-link="https://github.com/CodeCraftMaster101/db.TP.Subnetting/archive/refs/heads/main.zip">
+                        >> DOWNLOAD FILE
+                    </button>
+                </div>
+
+                <div class="file-item">
+                    <div class="file-icon">📁</div>
+                    <div class="file-name">TP_VLSM.zip</div>
+                    <div class="file-description">This file contains and the Cisco Packet Tracer schema that we used in the TP VLSM video on our channel</div>
+                    <button class="download-btn" onclick="downloadFile(this)" data-link="https://github.com/CodeCraftMaster101/db.TP.configuration.vlsm/archive/refs/heads/main.zip">
+                        >> DOWNLOAD FILE
+                    </button>
+                </div>
+
+                <div class="file-item">
+                    <div class="file-icon">💾</div>
+                    <div class="file-name">data_recovery.iso</div>
+                    <div class="file-description">Bootable recovery disk for data extraction and forensics</div>
+                    <button class="download-btn" onclick="downloadFile('data_recovery.iso')">
+                        >> DOWNLOAD FILE
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <span>System Status: ONLINE | Files Available: 4 | Last Update: <span id="last-update"></span></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
