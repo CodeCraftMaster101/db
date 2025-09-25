@@ -51,7 +51,8 @@
             align-items: center;
             justify-content: center;
             background: none;
-            cursor: pointer;     /* نحذف الخلفية الخضراء إذا ما تبغاها */
+            cursor: pointer;
+            flex-shrink: 0;
         }
         .site-icon img {
             width: 100%;
